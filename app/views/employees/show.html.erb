@@ -1,0 +1,23 @@
+<h1><%= @employee.to_s %></h1>
+
+<%= link_to "Back to All Employees", employees_path %><br>
+<%= button_to "Edit Employee", edit_employee_path(@employee) %>
+<ul>
+  <li>
+    Alias: <%=@employee.alias %>
+  </li>
+
+  <li>
+    Title: <%=@employee.title %>
+  </li>
+
+  <li>
+    Office: <%=@employee.office %>
+  </li>
+
+  <li>
+    Dog: <%=@employee.dog.name %>
+  </li>
+</ul>
+Photo:<br>
+<img src="<%=@employee.img_url%>" alt="<%=@employee.to_s%>">
