@@ -1,0 +1,23 @@
+<h1>Employee Page - Welcome to <%= @employee.first_name%> <%= @employee.last_name%>'s Page</h1>
+
+<div>
+    <img src="<%= @employee.img_url%>">
+</div>
+
+<h2>Alias: <%= @employee.alias%></h2>
+<h2>Title: <%= @employee.title%></h2>
+<h2>Office: <%= @employee.office%></h2>
+
+<%= link_to "Edit #{@employee.first_name}", edit_employee_path(@employee) %>
+<%= button_to "Remove Employee", @employee, :method => :delete %>
+
+
+
+<h3>Dawg</h3>
+<ul>
+    <li><%= link_to "#{@employee.dog.name}", dog_path(@employee.dog)%></li>
+</ul>
+
+
+<p><%= link_to "Employees List", employees_path%></p>
+<p><%= link_to "Dawgs List", dogs_path%></p>
