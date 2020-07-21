@@ -1,0 +1,15 @@
+<h1>Dawg Page - Welcome to <%= @dog.name%>'s Page</h1>
+
+<h2>Breed: <%= @dog.breed%></h2>
+<h2>Age: <%= @dog.age%></h2>
+
+<h3>Employees</h3>
+<ul>
+    <%@dog.employees.each do |employee|%>
+        <li><%= link_to "#{employee.first_name}", employee_path(employee)%></li>
+    <%end%>
+</ul>
+
+
+<p><%= link_to "Employees List", employees_path%></p>
+<p><%= link_to "Dawgs List", dogs_path%></p>
