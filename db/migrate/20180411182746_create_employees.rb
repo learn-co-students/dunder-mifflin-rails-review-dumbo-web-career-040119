@@ -8,6 +8,8 @@ class CreateEmployees < ActiveRecord::Migration[5.1]
       t.string :office
       t.string :img_url
 
+      t.belongs_to :dog, foreign_key: true
+
       t.timestamps
     end
   end

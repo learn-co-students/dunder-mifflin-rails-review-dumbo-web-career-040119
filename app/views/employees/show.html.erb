@@ -1,0 +1,18 @@
+<h1>
+  <%= @employee.first_name %>
+
+</h1>
+
+<p><%= @employee.last_name %></p>
+
+<p><%= @employee.alias %></p>
+<p><%= @employee.title %></p>
+<p><%= @employee.office %></p>
+
+
+
+<ol>
+<% [@employee.dog].each do |dog|  %>
+<li> <%=link_to "#{dog.name}", dog_path(dog)%> </li>
+<% end %>
+</ol>

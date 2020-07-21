@@ -1,0 +1,8 @@
+<h1> Welcome </h1>
+<dl>
+<% @employees.each do |employee| %>
+<li><%= link_to "#{employee.first_name}", employee %></li>
+<% end %></dl>
+<br>
+<%= link_to "Make new employee", new_employee_path %>
+<%= button_to "Create new", new_employee_path, method: :get %>
